@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.body{
+    background: black;
+}
+
+#header {
+    height: 100vh;
+    width: 100%; /* Set the height to 100% of the viewport height */
+    background-image: url('img/HEADER.jpg');
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-position: center; /* Center the background image horizontally and vertically */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
+
+  .container{
+    padding: 10px 10% ;
+  }
+  .container img{
+    width: 10%;
+    height: auto;
+    border-radius: 50%;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    background:#004165;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  nav ul li{
+    list-style: none;
+    margin: 10px 20px;
+  }
+
+  nav ul li a{
+    color: white;
+    text-decoration: none; /*This removes the default underline decoration that is typically applied to links. */
+    font-size: 18px;
+    position: relative;
+    /*This defines a positioning This defines a positioning context for any absolutely positioned child elements. for any absolutely positioned child elements.*/
+  }
+
+  nav ul li a::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    transform-origin: bottom left;
+    transform: scaleX(0); /* Initially, set the width to zero */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Expand the line on hover */
+}
+
+.header-text{
+    margin: 10%;
+    font-size: 30px;
+    color: white;
+    align-items: center;
+    
+}
+
+.header-text h1{
+    font-size: 80px;
+    padding-top: 5px;
+    font-weight: 800;
+ 
+}
+
+.header-text h3{
+  font-size: 30px;
+  padding-top: 5px;
+}
+.header-text span{
+  color: #004165;
+}
+/*About*/
+#about{
+  padding: 80px 0;
+  color: black;
+  background: #A9B2B1;
+  font-size: 18px;
+}
+.row{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+.about-col-1 {
+  width: 50%; /* Set the desired width for about-col-2 */
+  text-align: center; /* Center the content inside about-col-2 */
+  padding: 10px; /* Adjust padding as needed */
+}
+.about-col-1 img{
+  width: 100%;
+  height: auto;
+  border-radius: 20%;
+  padding: 10px;
+}
+
+.about-col-2 {
+  width: 50%; /* Set the desired width for about-col-2 */
+  text-align: center; /* Center the content inside about-col-2 */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.sub-title{
+  font-size: 60px;
+  color: #004165;
+  text-align: center;
+  text-decoration:underline;
+  margin-bottom: 30px;
+}
+
+.about-col-2 p{
+  padding: 10px;
+  text-align: left;
+  line-height: 20px;
+}
+
+.tab-titles{
+  margin: 20px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #004165;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after{
+  width: 100%;
+
+
+}
+
+.tab-contents ul li{
+  list-style: none;
+  text-align: left;
+  padding: 10px;
+
+}
+
+.tab-contents span{
+  color: #004165;
+}
+
+.tab-contents{ 
+  display: none;
+}
+
+.tab-contents.active-tab{
+  display: flex;
+}
+
+
+/*comments */
+.container-3{
+  padding: 30px;
+  background-color: #F2DF74;
+}
+
+.comments-class{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  
+
+}
+.comment{
+  display: flex;
+  align-items: center;
+  margin: 60px 80px;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: wavy;
+}
+
+.comment p{
+  width: 100%;
+  height: 100vh;
+  height: auto;
+  
+}
+
+.navigation{
+  text-align: center;
+  padding: 20px;
+}
+.navigation button{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  
+}
+.navigation button i{
+  font-size: 30px;
+}
+
+/* contact */
+.title{
+  color: black;
+  font-weight: 900;
+  text-align: center;
+}
+
+.contact-left{
+  flex-basis: 35%;
+}
+
+.contact-right{
+  flex-basis: 60%;
+}
+
+.contact-left p{
+  margin-top: 30px;
+}
+
+.contact-left p i{
+  color: blue;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+
+.social-icons{
+  margin-top: 30px;
+}
+
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color:#004165;
+  display: inline-flex;
+  transition:transform 0.5s;
+}
+
+.social-icons a:hover{
+  color:#A9B2B1 ;
+  transform: translateY(-5px);
+}
+.btn.btn2{
+  display: inline-block;
+  background: #A9B2B1;
+}
+
+.contact-right form{
+  width: 100%;
+}
+
+form input, form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #A9B2B1;
+  padding: 15px;
+  margin: 15px 0;
+  color: black;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form .btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background:black ;
+  color: aliceblue;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.copyright i{
+  color: white;
+}
+
+/* -------------css for small screens-------------*/
+nav .fa{ 
+  display: none;
+}
+@media only screen and (max-width:600px){
+  #header{
+    background-image: url(img/phone.jpg);
+  }
+  .header-text{
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1{
+    font-size: 30px;
+  }
+  nav .fa{ 
+    display: flex;
+    font-size: 25px;
+  }
+  nav ul{
+    background: #A9B2B1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    padding-top:50px ;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 25px;
+  }
+  nav ul fa{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+
+  }
+}
+
